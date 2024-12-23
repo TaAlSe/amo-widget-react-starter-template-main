@@ -2,11 +2,11 @@
 import React from 'react'
 
 const App = () => {
-  return (
-    <div>
-      Test Container
-    </div>
-  )
+    return (
+        <>
+            Сохранить телефон
+        </>
+    )
 };
 
 export default App;
