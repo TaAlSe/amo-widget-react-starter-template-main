@@ -1,10 +1,16 @@
 
-import React from 'react'
+import React, {useRef} from 'react'
 
 const App = () => {
+
+    const phone = useRef(
+        document.querySelector('[data-pei-code="phone"]')?.firstElementChild?.firstElementChild?.value);
+
+
+
     return (
         <>
-            Сохранить телефон
+            {phone.current? 'Заменить' : 'Сохранить'} телефон
         </>
     )
 };

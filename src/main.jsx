@@ -13,13 +13,13 @@ const Widget = {
     // Метод для рендеринга виджета
     render(self) {
         // Поиск элементов формы оплаты
-        const FormPayment_div = document.querySelectorAll('.feed-note.feed-note-external.feed-note-incoming');
+        const FormPayment_div = document
+            .querySelectorAll('.feed-note.feed-note-external.feed-note-incoming');
 
         // Перебор найденных элементов
         FormPayment_div.forEach(e => {
             const number = getMobileNumber(e?.children[1]?.children[1]?.firstElementChild?.innerHTML);
             if (number) {
-                console.log(number);
                 // Создание нового элемента
                 const div = document.createElement('div');
                 div.setAttribute('class', 'feed-note__talk-outgoing-wrapper ');
